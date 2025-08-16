@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	url := flag.String("url", "http://google.com", "URL do serviço a ser testado")
+	url := flag.String("url", "", "URL do serviço a ser testado")
 	requests := flag.Int("requests", 1, "Número total de requests")
 	concurrency := flag.Int("concurrency", 1, "Número de chamadas simultâneas")
 	flag.Parse()

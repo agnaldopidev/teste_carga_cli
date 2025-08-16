@@ -60,15 +60,20 @@ go run ./cmd/cli \
 ## 2️⃣  Executar com Docker
 ```bash
 # Construir imagem
-docker build -t testeCargaCLItester .
+docker build -t testecargacli .
 
 # Executar teste de carga
-docker run --rm testeCargaCLItester \
+docker run --rm testecargacli \
   --url=http://google.com \
   --requests=1000 \
   --concurrency=10
 ``` 
 ## 🧪 Testes
+### Local
+```bash
+    make install
+    loadtester --url=http://google.com --requests=10 --concurrency=2
+```
 ## Rodar todos os testes
 ```bash
 go test ./... -v

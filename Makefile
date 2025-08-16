@@ -37,3 +37,8 @@ docker-run:
 .PHONY: clean
 clean:
 	rm -f $(APP_NAME)
+
+install:
+	go build -o loadtester ./cmd/cli
+	sudo mv loadtester /usr/local/bin/
+
