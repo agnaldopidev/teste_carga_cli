@@ -1,4 +1,4 @@
-# LoadTester CLI
+# Teste de Carga CLI
 
 Aplicação **CLI em Go** para realizar **testes de carga** em serviços web, utilizando **arquitetura limpa**, **Clean Code** e princípios **SOLID**.
 
