@@ -1,14 +1,14 @@
 # Etapa 1: Build
-FROM golang:1.22-alpine AS builder
+FROM golang:1.23-alpine AS builder
 WORKDIR /app
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o loadtester ./cmd/cli
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o testeCargaCLI ./cmd/cli
 
 # Etapa 2: Imagem final
 FROM alpine:3.19
 RUN apk --no-cache add ca-certificates
 WORKDIR /app
-COPY --from=builder /app/loadtester .
-ENTRYPOINT ["/app/loadtester"]
+COPY --from=builder /app/testeCargaCLI .
+ENTRYPOINT ["/app/testeCargaCLI"]

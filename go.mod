@@ -1,3 +1,3 @@
-module github.com/agnaldopidev/loadtester
+module github.com/agnaldopidev/teste_carga_cli
 
-go 1.22
+go 1.23.6

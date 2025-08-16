@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/agnaldopidev/loadtester/internal/infra"
-	"github.com/agnaldopidev/loadtester/internal/usecase"
+	"github.com/agnaldopidev/teste_carga_cli/internal/infra"
+	"github.com/agnaldopidev/teste_carga_cli/internal/usecase"
 )
 
 func main() {

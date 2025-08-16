@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/agnaldopidev/loadtester/internal/domain"
+	_ "github.com/agnaldopidev/teste_carga_cli/internal/domain"
 )
 
 type MockHTTPClient struct {

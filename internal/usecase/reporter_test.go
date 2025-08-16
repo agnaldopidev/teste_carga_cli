@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/agnaldopidev/loadtester/internal/domain"
+	"github.com/agnaldopidev/teste_carga_cli/internal/domain"
 )
 
 type MockReporter struct {
