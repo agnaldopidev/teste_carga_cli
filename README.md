@@ -33,7 +33,7 @@ Ao final, o sistema gera um relatório com:
 ├── internal
 │ ├── domain # Entidades e interfaces
 │ ├── infra # Implementações (HTTP, Reporter)
-│ └── usecase # Regras de negócio (LoadTester)
+│ └── usecase # Regras de negócio (testeCargaCLITester)
 ├── go.mod
 ├── go.sum
 ├── Dockerfile
@@ -47,8 +47,8 @@ Ao final, o sistema gera um relatório com:
 ## 1️⃣ Instalar e executar localmente
 ```bash
 # Clonar o repositório
-git clone https://github.com/agnaldopidev/loadtester.git
-cd loadtester
+git clone https://github.com/agnaldopidev/teste_carga_cli.git
+cd testeCargaCLItester
  
 
 # Rodar localmente
@@ -60,10 +60,10 @@ go run ./cmd/cli \
 ## 2️⃣  Executar com Docker
 ```bash
 # Construir imagem
-docker build -t loadtester .
+docker build -t testeCargaCLItester .
 
 # Executar teste de carga
-docker run --rm loadtester \
+docker run --rm testeCargaCLItester \
   --url=http://google.com \
   --requests=1000 \
   --concurrency=10
@@ -75,12 +75,12 @@ go test ./... -v
 ``` 
 ## Saída esperada
 ```
-=== RUN   TestLoadTester_All200
---- PASS: TestLoadTester_All200 (0.00s)
-=== RUN   TestLoadTester_MixedResponses
---- PASS: TestLoadTester_MixedResponses (0.00s)
-=== RUN   TestLoadTester_ConcurrentExecution
---- PASS: TestLoadTester_ConcurrentExecution (0.00s)
+=== RUN   TesttesteCargaCLI_All200
+--- PASS: TesttesteCargaCLI_All200 (0.00s)
+=== RUN   TesttesteCargaCLI_MixedResponses
+--- PASS: TesttesteCargaCLI_MixedResponses (0.00s)
+=== RUN   TesttesteCargaCLI_ConcurrentExecution
+--- PASS: TesttesteCargaCLI_ConcurrentExecution (0.00s)
 === RUN   TestReporter_Output
 --- PASS: TestReporter_Output (0.00s)
 PASS
