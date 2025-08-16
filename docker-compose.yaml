@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  loadtester:
+    build: .
+    container_name: loadtester
+    image: loadtester:latest
+    stdin_open: true
+    tty: true
+    entrypoint: ["/app/loadtester"]
+    command: [
+      "--url=http://google.com",
+      "--requests=100",
+      "--concurrency=10"
+    ]
